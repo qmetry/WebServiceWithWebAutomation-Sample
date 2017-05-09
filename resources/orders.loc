@@ -1,0 +1,9 @@
+order.loc = {\"locator\":\"xpath=//tr[./td]\",\"desc\":\"Order Entry\"}
+createnew.button.loc = {\"locator\":\"link=Create a new order\",\"desc\":\" Create a new order Button\"}
+edit.button.loc = {\"locator\":\"link=Edit\",\"desc\":\"Edit Button\"}
+view.button.loc = {\"locator\":\"link=View\",\"desc\":\"View Button\"}
+delete.button.loc = {\"locator\":\"link=Delete\",\"desc\":\"Delete Button\"}
+order.id.loc = {\"locator\":\"xpath=.//td[1]\",\"desc\":\"Order Id\"}
+order.client.loc = {\"locator\":\"xpath=.//td[2]\",\"desc\":\"Client Name\"}
+order.amount.loc = {\"locator\":\"xpath=.//td[3]\",\"desc\":\"Order Amount\"}
+order.byname.loc.format = {\"locator\":\"xpath=//tr[./td[text()=\\\"{0}\\\"]]\",\"desc\":\"Order of {0}\"}

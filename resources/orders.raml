@@ -1,0 +1,32 @@
+#%RAML 0.8
+title: Orders API
+version: "1.0.0"
+baseUri: "http://qas.qmetry.com/struts2-rest-showcase-2.3.16.3"
+/orders.json: 
+    displayName: Order related operations
+    get: 
+        displayName: Get All Order Details
+    post: 
+        displayName: Create Order
+        body: 
+            application/x-www-form-urlencoded: 
+                formParameters:
+                    clientName:
+                        description: Client Name
+                        required: true
+                        type: string
+                    amount:
+                        description: Amount of order
+                        required: true
+                        type: string
+/orders/{orderId}.json: 
+    uriParameters: 
+        orderId: 
+            description: dsfdsf
+            type: string
+            required: false
+            repeat: false
+    get: 
+        displayName: Get Order Details
+    delete:
+        displayName: Delete Order

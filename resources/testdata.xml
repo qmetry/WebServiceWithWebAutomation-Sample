@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<testdata>
+		<validClient>
+			<clientName>Test</clientName>
+			<amount>123</amount>
+		</validClient>
+	</testdata>
+</root>

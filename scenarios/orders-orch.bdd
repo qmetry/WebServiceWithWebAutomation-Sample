@@ -1,0 +1,24 @@
+
+
+SCENARIO: Add New Order
+META-DATA: {"description": "Add New Order using webservice","groups": ["ORCHESTRATED"],"key":"testdata.validClient"}
+	
+	Given user requests 'create.account' with data '${args[0]}'
+	Then response should have status 'CREATED'
+	And response should have header 'Location'
+	And store response header 'Location' into 'new.order.id'
+	Then Order Entry for '${new.order.id}' should be present on Orders Page
+
+END
+
+SCENARIO: Delete Order
+META-DATA: {"description": "Delete Order using webservice","groups": ["ORCHESTRATED"]}
+			
+	Given user requests 'get.account'
+	Then response should have status 'OK'
+	Then response should have 'clientName'
+	When user requests 'delete.account'
+	Then response should have status 'OK'
+	Then Order Entry for '${new.order.id}' should not be present on Orders Page
+
+END
