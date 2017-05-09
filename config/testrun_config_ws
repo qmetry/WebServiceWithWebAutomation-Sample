@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="QAF Demo" verbose="0">
+
+	<test name="WS Test" enabled="true">
+		<groups>
+			<run>
+				<include name="WS"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.qmetry.qaf.automation.step.client.text.BDDTestFactory"></class>
+		</classes>
+	</test>
+
+</suite>
