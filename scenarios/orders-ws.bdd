@@ -1,0 +1,26 @@
+
+
+SCENARIO: Add New Order
+META-DATA: {"description": "Add New Order using webservice","groups": ["WS"],"key":"testdata.validClient"}
+	
+	Given user requests 'create.account' with data '${args[0]}'
+	Then response should have status 'CREATED'
+	And response should have header 'Location'
+	And store response header 'Location' into 'new.order.id'
+	When user requests 'get.all.accounts'
+	Then response should have value contains ignoring case '${clientName}' at '$..clientName'
+
+END
+
+SCENARIO: Delete Order
+META-DATA: {"description": "Delete Order using webservice","groups": ["WS"]}
+			
+	Given user requests 'get.account'
+	Then response should have status 'OK'
+	Then response should have 'clientName'
+	When user requests 'delete.account'
+	Then response should have status 'OK'
+	When user requests 'get.all.accounts'
+	Then response should not have value '${clientName}' at '$..clientName'
+
+END

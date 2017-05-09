@@ -1,0 +1,4 @@
+get.account = {\"headers\":{},\"endPoint\":\"\",\"baseUrl\":\"${new.order.id}\",\"method\":\"GET\",\"query-parameters\":{},\"body\":\"\",\"form-parameters\":{}}
+get.all.accounts = {\"headers\":{},\"endPoint\":\"/struts2-rest-showcase-2.3.16.3/orders.json\",\"baseUrl\":\"http://qas.qmetry.com\",\"method\":\"GET\",\"query-parameters\":{},\"body\":\"\",\"form-parameters\":{}}
+delete.account = {\"headers\":{},\"endPoint\":\"\",\"baseUrl\":\"${new.order.id}\",\"method\":\"DELETE\",\"query-parameters\":{},\"body\":\"\",\"form-parameters\":{}}
+create.account = {\"headers\":{},\"endPoint\":\"/struts2-rest-showcase-2.3.16.3/orders.json\",\"baseUrl\":\"http://qas.qmetry.com\",\"method\":\"POST\",\"query-parameters\":{},\"body\":\"\",\"form-parameters\":{\"amount\":\"${amount}\",\"clientName\":\"${clientName}\"}}
