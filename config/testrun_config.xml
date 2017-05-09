@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="QAS Demo" verbose="0">
+<suite name="QAF Demo" verbose="0">
 
 	<test name="Orchestrated Test" enabled="true">
 		<groups>
